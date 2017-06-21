@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquerry home</title>
+	<script type="text/javascript" src="styles/jquery/jquery.js"></script>
+	<script type="text/javascript" language="javascript">
+		$(function(){
+			/**
+			   *jquery effects
+			  **/
+			/*selecting html elements*/
+			$("p").css("background-color","red");
+			$("p").css("color","cyan");
+			$("p:first").css("background-color","blue");
+			$("p:last").css("background-color","green");
+			$("p:last").css("width","50%");
+			$("p:odd").css("width","80%");
+			$("body").css("background-color","blue");
+			//$("body").fadeTo("slow",0);
+
+			$("#hide").click(function(){
+			$("p").toggle(1000);//toggling between hide and show
+           
+			$("#show").click(function(){
+				$("#sis").show(1500);//showing a hidden element
+			});
+
+			$("#fadein").click(function(){
+                $("#sis").fadeOut(3000);//fading an element
+			});
+
+			$("#fadetoggle").click(function(){
+				$("#sis").fadeToggle(100);//toggle btn fadein and fadeout
+			});
+		});
+			
+		});
+		
+	</script>
+</head>
+<body>
+    <center><a href="login.html">Login from here</a></center>
+   <p>this is the first</p>
+      <p>this is the first</p>
+         <p>this is the first</p>
+    <p id="sis">
+    	This is a little poem:
+Twinkle, twinkle, little star
+How I wonder what you are
+Up above the world so high
+Like a diamond in the sky
+Twinkle, twinkle little star
+How I wonder what you are 
+    </p>
+
+  <input type="button" id="hide" value="buttin">
+  <input type="button" value="show" id="show">
+  <input type="button" value="fade" id="fadein">
+  <input type="button" value="fade toggle" id="fadetoggle">
+
+
+</body>
+</html>

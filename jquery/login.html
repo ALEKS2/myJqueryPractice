@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<script type="text/javascript" src="styles/jquery/jquery.js"></script>
+	
+	<script type="text/javascript" language="javascript">
+		$(function(){
+           $("#slider").click(function(){
+           	$("#log").slideToggle("slow");//sliding down and up ie instead of "slideDown" or "slideUp"
+           });
+           
+           $(":text,:password").focus(function(){
+           $(":text,:password").delay("slow").animate({ width:'100%',height:'100%',opacity:0.8,backgroundColor: "#aa0000",  
+              color: "#fff"
+           });
+           });
+          });
+	</script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>  
+    <center>
+    	<input type="button" name="" id="slider" value="login for our servises">
+    </center><hr>
+    <div id="log" align="center" style="background-color: blue;display: none;">
+    	<form>
+    		<input type="text" name="name" placeholder="Name"><hr>
+    		<input type="password" name="" placeholder="password
+    		">
+    		<input type="submit" name="" value="login"><hr>
+    	</form>
+    </div>
+    <a href="index.html">home</a>
+
+</body>
+</html>
