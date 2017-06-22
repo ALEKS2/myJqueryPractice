@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>serialize</title>
+	<script type="text/javascript" src="styles/jquery/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+           $("#but").click(function(){
+             var serial=$("form").serialize();
+             $("#rec").val(serial);
+
+             $("#but").dblclick(function(event){
+             	alert(event.pageX+","+event.pageY);
+             });
+             $("#rec").blur(function(){alert("heloo blur");});
+           });
+
+             $("#sele").select(function(){
+             	$("#div").text("here");
+             });
+
+            
+		});
+	</script>
+</head>
+<body>
+    <form>
+    	<input type="text" name="name" id="name" placeholder="Name" >
+    	<input type="email" name="email" id="email" placeholder="Email" >
+    </form>
+    <input type="text" name="" id="rec">
+    <button id="but">
+    	serialise
+    </button>
+    <input type="text" name="" id="sele" value="select this data">
+    <div id="div"></div>
+</body>
+</html>

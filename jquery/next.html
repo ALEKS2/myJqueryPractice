@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>next jquery</title>
+	<script type="text/javascript" src="styles/jquery/jquery.js"></script>
+	<script>
+		$(function(){
+			/*$("#changer").click(function(){
+               $("P").html("maama nyabo i have changed");
+			});  */
+
+			/*var srcs=$("p:last").text();
+			$("p:first").text(srcs);
+			*/
+
+			var selected=$("p:first").text();
+		    alert(selected);
+
+		    function selector(){
+		    	var values=$("#selected").val();
+		    	$("#span").html("<b style='color:red'>You selected:</b>"+values);
+		    }
+		    $("#selected").change(selector);
+		    selector();
+
+		 /*   $("#number").click(function(){
+		    	$("p").before("<span>1</span>")
+		    });*/
+		     $("#number").click(function(){
+		    	$("p").prepend("<b>1.</b>")
+
+		    });
+
+		     $("#clone").click(function(){
+		     	$("p").clone().appendTo("body");
+		     });
+		     $("#remover").click(function(){
+		     	$("p:first").remove();
+		     });
+
+		});
+		
+	</script>
+</head>
+<body>
+    <p>i will never change</p>
+    <p>changing me is quite impossible</p>
+    <input type="button" name="but" id="changer" value="click here to see the change">
+    <input type="button" name="" id="number" value="lable your paragraphs">
+    <input type="button" name="" id="clone" value="clone">
+    <input type="button" name="" id="remover" value="remove paragraphs">
+    <select id="selected">
+    	<option>ugnda</option>
+    	<option>korea</option>
+    	<option>china</option>
+    	<option>japan</option>
+    	<option>The US</option>
+    </select><span id="span" style="color: blue"></span>
+
+</body>
+</html>
